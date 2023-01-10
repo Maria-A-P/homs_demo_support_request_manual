@@ -54,16 +54,16 @@ For internal use only.</p>
 <div class="sectionbody">
 <div id="section_2" class="paragraph text-left text-left">
 <p>It is possible to create three kinds of processes in the demo version of the system: "Vacation Request", "Support Request" and "Pizza Order".
-Curent manual deals with the "Support Request".
+Current manual deals with the "Support Request".
 <br>
 <br>
-The whole process of support request handling is depicted in the process diagram below.
+The whole process of support request handling is shown in the process diagram below.
 <br>
 Tasks are depicted with rectangles with an id number.
 <br>
 Events are depicted as circles. There is a start event, end event and intermediate events (where "Resolution", "Status" and "Business process state", or "BP state", automatically change).
 <br>
-Branchings are depicted with diamonds with "X" sign.
+Branchings are depicted as diamonds with "X" sign.
 <br>
 Timers start at the beginning of the task they are attached to and redirect the process when the specified time ends.
 <br>
@@ -90,7 +90,7 @@ One should check that fields "Requester Name", "Requester Phone", "Subject" and 
 It will be impossible to correct them properly at next stages.
 <br>
 <br>
-Press "Handle Support Request" (see screensot for task 4) to direct the order to the 1st line.
+Press "Handle Support Request" (see screenshot for task 4) to direct the order to the 1st line.
 <br>
 <br>
 The 1st Line Support Engineer (task 6) might want to reload the page to see actual information in the lower part of the page.
@@ -149,10 +149,10 @@ The page with request info (as in task 4) is automatically loaded. Reload the pa
 <p>at the moment it is not possible to edit request info after the request was directed to handling (tasks 7, 10, 13). Data are saved temporarily, but at the end of the process all changes get cancelled;</p>
 </li>
 <li>
-<p>request handling by the 1st and 2nd Line Engineers (tasks 6 and 9) shoud be comleted by design within 5 minutes each (as written in orange banners). The timer in task 6 does not get cancelled as the process passes to task 9 though, so task 9 has to be completed within 5 minutes from the start of task 6. Editing (tasks 7 and 10) is included in this time, but is strictly not recommended, see the above note;</p>
+<p>by design (as is written in orange banners), there are 5 minutes for the 1st line (task 6) and 5 minutes for the 2nd line (task 9) to handle the request. The timer in task 6 does not get cancelled as the process passes to task 9 though, so presently task 9 has to be completed within 5 minutes from the start of task 6. Editing (tasks 7 and 10) is included in this time, but is strictly not recommended, see the above note;</p>
 </li>
 <li>
-<p>in demo version, the roles of participants are not strictly separated, so it looks like the first tasks can be done by any participant. At the end of processing the system redirects all the participants to task 4 ("Check request info"). No formal end of process is organized, so the partiipant is supposed either to do nothing, or to become the 1st Level Support Engineer and handle the process again;</p>
+<p>in demo version, the roles of participants are not strictly separated, so it looks like the first tasks can be done by any participant. At the end of processing the system redirects all the participants to task 4 ("Check request info"). No formal end of process is organized, so the participant is supposed either to do nothing, or to become the 1st Level Support Engineer and handle the process again;</p>
 </li>
 <li>
 <p>tasks 8 and 11 (picking a redirected order) in the demo version of the system are not mandatory, redirection is done automatically.</p>
@@ -310,7 +310,7 @@ The page with request info (as in task 4) is automatically loaded. Reload the pa
 <div id="footer">
 <div id="footer-text">
 Version V1.0<br>
-Last updated 2023-01-10 23:16:07 +0300
+Last updated 2023-01-11 00:28:54 +0300
 </div>
 </div>
 </body>
