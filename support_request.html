@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.18">
+<title>Hydra OMS demo: Support Request process: User manual (draft)</title>
+<link rel="stylesheet" href="./support_request.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>Hydra OMS demo: Support Request process: User manual (draft)</h1>
+<div class="details">
+<span id="revnumber">version V1.0,</span>
+<span id="revdate">22-01-10</span>
+<br><span id="revremark">for internal use only</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of contents</div>
+<ul class="sectlevel1">
+<li><a href="#_introduction">1. Introduction</a></li>
+<li><a href="#_process_description">2. Process description</a></li>
+<li><a href="#_screenshots">3. Screenshots</a>
+<ul class="sectlevel2">
+<li><a href="#section_3">3.1. Task 1: &#160; Create a new order using [Add] button at <em>Orders list</em> page</a></li>
+<li><a href="#_task_2_input_request_info_manually">3.2. Task 2: &#160; Input request info manually</a></li>
+<li><a href="#_task_3_create_a_new_order_at_start_page">3.3. Task 3: &#160; Create a new order at start page</a></li>
+<li><a href="#_task_4_check_request_info">3.4. Task 4: &#160; Check request info</a></li>
+<li><a href="#_task_5_edit_request_info">3.5. Task 5: &#160; Edit request info</a></li>
+<li><a href="#_task_6_handle_request_at_1st_line">3.6. Task 6: &#160; Handle request at 1st line</a></li>
+<li><a href="#_task_8_pick_an_order_request_2nd_line">3.7. Task 8: &#160; Pick an order / request (2nd line)</a></li>
+<li><a href="#_task_9_handle_request_at_2nd_line">3.8. Task 9: &#160; Handle request at 2nd line</a></li>
+<li><a href="#_task_11_pick_an_order_request_lead_support_engineer">3.9. Task 11: &#160; Pick an order / request (Lead Support Engineer)</a></li>
+<li><a href="#_task_12_handle_request_lead_support_engineer">3.10. Task 12: &#160; Handle request (Lead Support Engineer)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1 text-center">
+<h2 id="_introduction"><a class="link" href="#_introduction">1. Introduction</a></h2>
+<div class="sectionbody">
+<div id="section_1" class="paragraph text-left">
+<p>Current manual describes Support Request process in demo version of Hydra OMS (<a href="http://demo.hydra-oms.com/" class="bare">http://demo.hydra-oms.com/</a>), "as is".
+<br>
+For internal use only.</p>
+</div>
+</div>
+</div>
+<div class="sect1 text-center">
+<h2 id="_process_description"><a class="link" href="#_process_description">2. Process description</a></h2>
+<div class="sectionbody">
+<div id="section_2" class="paragraph text-left text-left">
+<p>It is possible to create three kinds of processes in the demo version of the system: "Vacation Request", "Support Request" and "Pizza Order".
+Curent manual deals with the "Support Request".
+<br>
+<br>
+The whole process of support request handling is depicted in the process diagram below.
+<br>
+Tasks are depicted with rectangles with an id number.
+<br>
+Events are depicted as circles. There is a start event, end event and intermediate events (where "Resolution", "Status" and "Business process state", or "BP state", automatically change).
+<br>
+Branchings are depicted with diamonds with "X" sign.
+<br>
+Timers start at the beginning of the task they are attached to and redirect the process when the specified time ends.
+<br>
+<br>
+See section 3 for screenshots.</p>
+</div>
+<div class="openblock float-group">
+<div class="content">
+<div id="process_diag" class="imageblock thumb">
+<div class="content">
+<img src="./pictures_good/___SupRequest_v3_x2___2568_1956.png" alt="process_diag" width="2568" height="1956">
+</div>
+<div class="title"> Support Request process diagram</div>
+</div>
+</div>
+</div>
+<div class="paragraph text-left">
+<p>In the demo version of the system, in order to start the request handling process one should either create an empty order (request) (task 1), and fill in the data manually (task 2), or create an order (request) with automatically generated data (task 3).
+<br>
+<br>
+Once the order (request) is created, one can check its data (task 4) and edit the data if necessary (task 5).
+<br>
+One should check that fields "Requester Name", "Requester Phone", "Subject" and "Description" are filled in correctly.
+It will be impossible to correct them properly at next stages.
+<br>
+<br>
+Press "Handle Support Request" (see screensot for task 4) to direct the order to the 1st line.
+<br>
+<br>
+The 1st Line Support Engineer (task 6) might want to reload the page to see actual information in the lower part of the page.
+<br>
+There is a button [Edit] at the bottom of the page which leads to task 7, but any changes will be saved only temporarily (see notes).
+<br>
+He/she should fill in the field "Resolution" (text will be saved as "Resolution Text") and then decide whether the task is completed ([Solve] button), or should be redirected to the 2nd line ([Need Help] button).
+<br>
+<br>
+If he/she spends more than 5 minutes solving the problem, the request (order) will be redirected to the Lead Support Engineer.
+<br>
+<br>
+If [Solve] button was chosen in task 6, the page with request info (as in task 4) will be automatically loaded. Reload the page to see actual data. One can stop now or repeat the request handling.
+<br>
+<br>
+If you press [Need Help] in task 6, the request (order) will be redirected to 2nd line.
+<br>
+<br>
+The 2nd Line Support Engineer can pick up an order from the list under the right-most sign in the upper menu (task 8), or, in the demo version of the system, just automatically get the request (order).
+<br>
+He/she should reload the page with request info (see screenshot for task 9), to see the actual information.
+<br>
+There is a button [Edit] at the bottom of the page which leads to task 10, but any changes will be saved only temporarily (see notes).
+<br>
+He/she should solve the problem and press [Submit] button within the remainder of those 5 minutes that started at the beginning of task 6.
+<br>
+In this case the page with request info (as in task 4) is automatically loaded. Reload the page to see actual data. One can stop now or repeat the request handling.
+<br>
+If he/she doesn&#8217;t meet the deadline, the request (order) will be redirected to the Lead Support Engineer.
+<br>
+<br>
+The Lead Support Engineer, in his turn, can pick up an order from the list under the right-most sign in the upper menu (task 11), or, in the demo version of the system, just automatically get the request (order).
+<br>
+He/she should reload the page with request info (see screenshot for task 12), to see the actual information.
+<br>
+There is a button [Edit] at the bottom of the page which leads to task 13, but any changes will be saved only temporarily (see notes).
+<br>
+He/she should solve the problem and press [Submit] button.
+<br>
+The page with request info (as in task 4) is automatically loaded. Reload the page to see actual data. One can stop now or repeat the request handling.
+<br>
+<br></p>
+</div>
+<div class="paragraph text-left">
+<p>Notes:</p>
+</div>
+<div class="ulist text-left">
+<ul>
+<li>
+<p>some data fields should not be filled in or edited manually since they get overwritten automatically (namely, "Resolution" and "Resolution Text" fields);</p>
+</li>
+<li>
+<p>request data on pages corresponding to tasks 4, 6 (below), 9 (below), 12 (below) (see screenshots in section 3) do not show updated as the page loads. To see actual data one should reload the page;</p>
+</li>
+<li>
+<p>at the moment it is not possible to edit request info after the request was directed to handling (tasks 7, 10, 13). Data are saved temporarily, but at the end of the process all changes get cancelled;</p>
+</li>
+<li>
+<p>request handling by the 1st and 2nd Line Engineers (tasks 6 and 9) shoud be comleted by design within 5 minutes each (as written in orange banners). The timer in task 6 does not get cancelled as the process passes to task 9 though, so task 9 has to be completed within 5 minutes from the start of task 6. Editing (tasks 7 and 10) is included in this time, but is strictly not recommended, see the above note;</p>
+</li>
+<li>
+<p>in demo version, the roles of participants are not strictly separated, so it looks like the first tasks can be done by any participant. At the end of processing the system redirects all the participants to task 4 ("Check request info"). No formal end of process is organized, so the partiipant is supposed either to do nothing, or to become the 1st Level Support Engineer and handle the process again;</p>
+</li>
+<li>
+<p>tasks 8 and 11 (picking a redirected order) in the demo version of the system are not mandatory, redirection is done automatically.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1 text-center">
+<h2 id="_screenshots"><a class="link" href="#_screenshots">3. Screenshots</a></h2>
+<div class="sectionbody">
+<div class="sect2 text-left text-left">
+<h3 id="section_3"><a class="link" href="#section_3">3.1. Task 1: &#160; Create a new order using [Add] button at <em>Orders list</em> page</a></h3>
+<div id="section_3.1" class="openblock text-left float-group">
+<div class="content">
+<div id="task1" class="imageblock thumb">
+<div class="content">
+<img src="./pictures_good/_1_add__654_697.png" alt="task1" width="654" height="697">
+</div>
+<div class="title">Task 1:   Create a new order using [Add] button at <em>Orders list</em> page</div>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2 text-left">
+<h3 id="_task_2_input_request_info_manually"><a class="link" href="#_task_2_input_request_info_manually">3.2. Task 2: &#160; Input request info manually</a></h3>
+<div id="section_3.2" class="openblock text-left float-group">
+<div class="content">
+<div id="task2" class="imageblock thumb">
+<div class="content">
+<img src="./pictures_good/_2_initial_view__631_538.png" alt="task2" width="631" height="538">
+</div>
+<div class="title">Task 2:   Input request info manually</div>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2 text-left">
+<h3 id="_task_3_create_a_new_order_at_start_page"><a class="link" href="#_task_3_create_a_new_order_at_start_page">3.3. Task 3: &#160; Create a new order at start page</a></h3>
+<div id="section_3.3" class="openblock text-left float-group">
+<div class="content">
+<div id="task3" class="imageblock thumb">
+<div class="content">
+<img src="./pictures_good/_3_start_screen__844_398.png" alt="task3" width="844" height="398">
+</div>
+<div class="title">Task 3:   Create a new order at start page</div>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2 text-left">
+<h3 id="_task_4_check_request_info"><a class="link" href="#_task_4_check_request_info">3.4. Task 4: &#160; Check request info</a></h3>
+<div id="section_3.4" class="openblock text-left float-group">
+<div class="content">
+<div id="task4" class="imageblock text-center thumb">
+<div class="content">
+<img src="./pictures_good/_4_check__646_495.png" alt="task4" width="646" height="495">
+</div>
+<div class="title">Task 4:   Check request info</div>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2 text-left">
+<h3 id="_task_5_edit_request_info"><a class="link" href="#_task_5_edit_request_info">3.5. Task 5: &#160; Edit request info</a></h3>
+<div id="section_3.5" class="openblock text-left float-group">
+<div class="content">
+<div id="task5" class="imageblock thumb">
+<div class="content">
+<img src="./pictures_good/_5_edit__644_397.png" alt="task5" width="644" height="397">
+</div>
+<div class="title">Task 5:   Edit request info</div>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2 text-left">
+<h3 id="_task_6_handle_request_at_1st_line"><a class="link" href="#_task_6_handle_request_at_1st_line">3.6. Task 6: &#160; Handle request at 1st line</a></h3>
+<div id="section_3.6" class="openblock text-left float-group">
+<div class="content">
+<div id="task6" class="imageblock thumb">
+<div class="content">
+<img src="./pictures_good/_6_1st_line__702_985.png" alt="task6" width="702" height="985">
+</div>
+<div class="title">Task 6:   Handle request at 1st line</div>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2 text-left">
+<h3 id="_task_8_pick_an_order_request_2nd_line"><a class="link" href="#_task_8_pick_an_order_request_2nd_line">3.7. Task 8: &#160; Pick an order / request (2nd line)</a></h3>
+<div id="section_3.7" class="openblock text-left float-group">
+<div class="content">
+<div id="task8" class="imageblock thumb">
+<div class="content">
+<img src="./pictures_good/_8_choose_2nd__648_850.png" alt="task8" width="648" height="850">
+</div>
+<div class="title">Task 8:   Pick an order / request (2nd line)</div>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2 text-left">
+<h3 id="_task_9_handle_request_at_2nd_line"><a class="link" href="#_task_9_handle_request_at_2nd_line">3.8. Task 9: &#160; Handle request at 2nd line</a></h3>
+<div id="section_3.8" class="openblock text-left float-group">
+<div class="content">
+<div id="task9" class="imageblock thumb">
+<div class="content">
+<img src="./pictures_good/_9_2nd_line__844_1080.png" alt="task9" width="844" height="1080">
+</div>
+<div class="title">Task 9:   Handle request at 2nd line</div>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2 text-left">
+<h3 id="_task_11_pick_an_order_request_lead_support_engineer"><a class="link" href="#_task_11_pick_an_order_request_lead_support_engineer">3.9. Task 11: &#160; Pick an order / request (Lead Support Engineer)</a></h3>
+<div id="section_3.9" class="openblock text-left float-group">
+<div class="content">
+<div id="task11" class="imageblock thumb">
+<div class="content">
+<img src="./pictures_good/_11_lead_choose__645_776.png" alt="task11" width="645" height="776">
+</div>
+<div class="title">Task 11:   Pick an order / request (Lead Support Engineer)</div>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2 text-left">
+<h3 id="_task_12_handle_request_lead_support_engineer"><a class="link" href="#_task_12_handle_request_lead_support_engineer">3.10. Task 12: &#160; Handle request (Lead Support Engineer)</a></h3>
+<div id="section_3.10" class="openblock text-left float-group">
+<div class="content">
+<div id="task12" class="imageblock thumb">
+<div class="content">
+<img src="./pictures_good/_12_lead__842_1010.png" alt="task12" width="842" height="1010">
+</div>
+<div class="title">Task 12:   Handle request (Lead Support Engineer)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version V1.0<br>
+Last updated 2023-01-10 23:16:07 +0300
+</div>
+</div>
+</body>
+</html>

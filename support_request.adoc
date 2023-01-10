@@ -1,0 +1,294 @@
+
+
+:revnumber: V1.0
+:revdate: 22-01-10
+:revremark: for internal use only
+:url-repo: https://github.com/Maria-A-P/___________
+:toc: left
+:toc-title: Table of contents
+:toclevels: 3
+:encoding: utf-8
+:lang: en
+:legacy-footnoteref:
+:sectlinks:
+:sectnums:
+:sectnumlevels: 3
+:imagesdir: ./pictures_good
+:showtitle:
+:stylesheet: support_request.css
+:linkcss:
+
+
+
+
+
+= Hydra OMS demo: Support Request process: User manual (draft)
+
+[.text-center]
+== Introduction
+[.text-left]
+[[section_1]] 
+
+Current manual describes Support Request process in demo version of Hydra OMS (http://demo.hydra-oms.com/), "as is".
+ +
+For internal use only.
+
+
+[.text-center]
+== Process description
+[.text-left]
+[[section_2]] 
+
+
+[.text-left]
+It is possible to create three kinds of processes in the demo version of the system: "Vacation Request", "Support Request" and "Pizza Order". 
+Curent manual deals with the "Support Request".
+ +
+ +
+The whole process of support request handling is depicted in the process diagram below.
+ +
+Tasks are depicted with rectangles with an id number.
+ +
+Events are depicted as circles. There is a start event, end event and intermediate events (where "Resolution", "Status" and "Business process state", or "BP state", automatically change).
+ +
+Branchings are depicted with diamonds with "X" sign.
+ +
+Timers start at the beginning of the task they are attached to and redirect the process when the specified time ends.
+ +
+ +
+See section 3 for screenshots.
+
+
+[.float-group]
+--
+
+[.thumb]
+image::___SupRequest_v3_x2___2568_1956.png[process_diag,2568,1956,id="process_diag",caption=" ",title="Support Request process diagram"]
+
+--
+
+
+[.text-left]
+In the demo version of the system, in order to start the request handling process one should either create an empty order (request) (task 1), and fill in the data manually (task 2), or create an order (request) with automatically generated data (task 3).
+ +
+ +
+Once the order (request) is created, one can check its data (task 4) and edit the data if necessary (task 5).
+ +
+One should check that fields "Requester Name", "Requester Phone", "Subject" and "Description" are filled in correctly. 
+It will be impossible to correct them properly at next stages.
+ +
+ +
+Press "Handle Support Request" (see screensot for task 4) to direct the order to the 1st line.
+ +
+ +
+The 1st Line Support Engineer (task 6) might want to reload the page to see actual information in the lower part of the page.
+ +
+There is a button [Edit] at the bottom of the page which leads to task 7, but any changes will be saved only temporarily (see notes).
+ +
+He/she should fill in the field "Resolution" (text will be saved as "Resolution Text") and then decide whether the task is completed ([Solve] button), or should be redirected to the 2nd line ([Need Help] button).
+ +
+ +
+If he/she spends more than 5 minutes solving the problem, the request (order) will be redirected to the Lead Support Engineer.
+ +
+ +
+If [Solve] button was chosen in task 6, the page with request info (as in task 4) will be automatically loaded. Reload the page to see actual data. One can stop now or repeat the request handling.
+ +
+ +
+If you press [Need Help] in task 6, the request (order) will be redirected to 2nd line.
+ +
+ +
+The 2nd Line Support Engineer can pick up an order from the list under the right-most sign in the upper menu (task 8), or, in the demo version of the system, just automatically get the request (order).
+ +
+He/she should reload the page with request info (see screenshot for task 9), to see the actual information.
+ +
+There is a button [Edit] at the bottom of the page which leads to task 10, but any changes will be saved only temporarily (see notes).
+ +
+He/she should solve the problem and press [Submit] button within the remainder of those 5 minutes that started at the beginning of task 6.
+ +
+In this case the page with request info (as in task 4) is automatically loaded. Reload the page to see actual data. One can stop now or repeat the request handling.
+ +
+If he/she doesn't meet the deadline, the request (order) will be redirected to the Lead Support Engineer.
+ +
+ +
+The Lead Support Engineer, in his turn, can pick up an order from the list under the right-most sign in the upper menu (task 11), or, in the demo version of the system, just automatically get the request (order).
+ +
+He/she should reload the page with request info (see screenshot for task 12), to see the actual information.
+ +
+There is a button [Edit] at the bottom of the page which leads to task 13, but any changes will be saved only temporarily (see notes).
+ +
+He/she should solve the problem and press [Submit] button.
+ +
+The page with request info (as in task 4) is automatically loaded. Reload the page to see actual data. One can stop now or repeat the request handling.
+ +
+ +
+
+
+[.text-left]
+Notes:
+[.text-left]
+- some data fields should not be filled in or edited manually since they get overwritten automatically (namely, "Resolution" and "Resolution Text" fields);
+- request data on pages corresponding to tasks 4, 6 (below), 9 (below), 12 (below) (see screenshots in section 3) do not show updated as the page loads. To see actual data one should reload the page;
+- at the moment it is not possible to edit request info after the request was directed to handling (tasks 7, 10, 13). Data are saved temporarily, but at the end of the process all changes get cancelled;
+- request handling by the 1st and 2nd Line Engineers (tasks 6 and 9) shoud be comleted by design within 5 minutes each (as written in orange banners). The timer in task 6 does not get cancelled as the process passes to task 9 though, so task 9 has to be completed within 5 minutes from the start of task 6. Editing (tasks 7 and 10) is included in this time, but is strictly not recommended, see the above note;
+- in demo version, the roles of participants are not strictly separated, so it looks like the first tasks can be done by any participant. At the end of processing the system redirects all the participants to task 4 ("Check request info"). No formal end of process is organized, so the partiipant is supposed either to do nothing, or to become the 1st Level Support Engineer and handle the process again;
+- tasks 8 and 11 (picking a redirected order) in the demo version of the system are not mandatory, redirection is done automatically.
+
+
+<<<
+[.text-center]
+== Screenshots
+[.text-left]
+[[section_3]] 
+
+
+[.text-left]
+=== Task 1: {nbsp} Create a new order using [Add] button at _Orders list_ page
+[.text-left]
+[[section_3.1]] 
+
+[.float-group]
+--
+
+[.thumb]
+image::_1_add__654_697.png[task1,654,697,id="task1",caption="Task 1:   ",title="Create a new order using [Add] button at _Orders list_ page"]
+
+--
+
+<<<
+[.text-left]
+=== Task 2: {nbsp} Input request info manually
+[.text-left]
+[[section_3.2]] 
+
+[.float-group]
+--
+
+[.thumb]
+image::_2_initial_view__631_538.png[task2,631,538,id="task2",caption="Task 2:   ",title="Input request info manually"]
+
+--
+
+
+<<<
+[.text-left]
+=== Task 3: {nbsp} Create a new order at start page
+[.text-left]
+[[section_3.3]] 
+
+[.float-group]
+--
+
+[.thumb]
+image::_3_start_screen__844_398.png[task3,844,398,id="task3",caption="Task 3:   ",title="Create a new order at start page"]
+
+--
+
+
+<<<
+[.text-left]
+=== Task 4: {nbsp} Check request info
+[.text-left]
+[[section_3.4]] 
+
+[.float-group]
+--
+
+[.text-center.thumb]
+image::_4_check__646_495.png[task4,646,495,id="task4",caption="Task 4:   ",title="Check request info"]
+
+--
+
+
+<<<
+[.text-left]
+=== Task 5: {nbsp} Edit request info
+[.text-left]
+[[section_3.5]] 
+
+[.float-group]
+--
+
+[.thumb]
+image::_5_edit__644_397.png[task5,644,397,id="task5",caption="Task 5:   ",title="Edit request info"]
+
+--
+
+
+<<<
+[.text-left]
+=== Task 6: {nbsp} Handle request at 1st line
+[.text-left]
+[[section_3.6]] 
+
+[.float-group]
+--
+
+[.thumb]
+image::_6_1st_line__702_985.png[task6,702,985,id="task6",caption="Task 6:   ",title="Handle request at 1st line"]
+
+--
+
+
+<<<
+[.text-left]
+=== Task 8: {nbsp} Pick an order / request (2nd line)
+[.text-left]
+[[section_3.7]] 
+
+[.float-group]
+--
+
+[.thumb]
+image::_8_choose_2nd__648_850.png[task8,648,850,id="task8",caption="Task 8:   ",title="Pick an order / request (2nd line)"]
+
+--
+
+
+<<<
+[.text-left]
+=== Task 9: {nbsp} Handle request at 2nd line
+[.text-left]
+[[section_3.8]] 
+
+[.float-group]
+--
+
+[.thumb]
+image::_9_2nd_line__844_1080.png[task9,844,1080,id="task9",caption="Task 9:   ",title="Handle request at 2nd line"]
+
+--
+
+
+<<<
+[.text-left]
+=== Task 11: {nbsp} Pick an order / request (Lead Support Engineer)
+[.text-left]
+[[section_3.9]] 
+
+[.float-group]
+--
+
+[.thumb]
+image::_11_lead_choose__645_776.png[task11,645,776,id="task11",caption="Task 11:   ",title="Pick an order / request (Lead Support Engineer)"]
+
+--
+
+
+<<<
+[.text-left]
+=== Task 12: {nbsp} Handle request (Lead Support Engineer)
+[.text-left]
+[[section_3.10]] 
+
+[.float-group]
+--
+
+[.thumb]
+image::_12_lead__842_1010.png[task12,842,1010,id="task12",caption="Task 12:   ",title="Handle request (Lead Support Engineer)"]
+
+--
+
+
+
+
+
